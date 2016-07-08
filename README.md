@@ -27,7 +27,11 @@ If it is desired to test a different secret, the 'secret' method in
 /src/com/pardot/Secret class should be overrident with the new secret.
 Then just run the following commands.
 >$./compile
-$./run 1000000 #or whichever a is desired
+
+>$./run 1000000 #or whichever a is desired
+
+NOTE: In order to run the compile, the computer being used must have a
+JDK of Java 1.8 or later.
 
 # About the Code
 
