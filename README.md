@@ -9,25 +9,25 @@ and determines if the secret() function is additive
 [secret(x+y) = secret(x) + secret(y)], for all combinations x and y, 
 where x and y are all prime numbers less than the number passed via the 
 command-line argument.  Describe how to run your examples. 
-Please generate the list of primes without using built-in functionality."
+Please generate the list of primes without using built-in functionality.
 
 This task was completed using java.
 
 In order to run the code, with the argument, in a shell command, use the 
 following:
->$./run a #Where a is a positive integer
+>$./run a #Where 'a' is a positive integer
 
 The secret method being tested can be found in /src/com/pardot/Secret.
-It is f(x) = 3x where x != 27 and x!= 9967, else 0.
-If a is less than or equal to 9967, the test will pass as f is linear
-for all values that are either prime, or the sum of two primes. As 9967
-is a prime number, the test will fail for a greater than 9967.
+It is f(x) = 3x where x != 27 and x!= 9967, else 0. As 27 is the
+smallest composite number that is not the sum of two primes, if 'a' is 
+less than or equal to 9967, the test will pass. As 9967 is a prime 
+number, the test will fail for 'a' greater than 9967.
 
 If it is desired to test a different secret, the 'secret' method in
 /src/com/pardot/Secret class should be overrident with the new secret.
 Then just run the following commands.
 >$./compile
->$./run 1000000 #or whichever 
+$./run 1000000 #or whichever a is desired
 
 # About the Code
 
