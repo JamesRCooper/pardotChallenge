@@ -1,0 +1,8 @@
+#!/bin/sh
+
+javac -d ./ src/com/pardot/*.java
+
+echo "Main-Class: com.pardot.Main" > manifest.txt
+jar cfm Main.jar manifest.txt com/pardot/*.class
+rm -r com/
+rm manifest.txt
